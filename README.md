@@ -15,15 +15,19 @@
 프론트엔드와 백엔드를 업무를 나누어 맡아 주도적으로 개발하되, 진행 상황에 따라 유동적으로 업무 분담을 했습니다.
 
 * 황희원 - 프론트엔드 (Vue.js)
+  * https://github.com/lea-hwang/oneshot-frontend
   * 프론트엔드 설계, Movie, Shot, Profile 페이지 & login, 회원가입 모달 구현
   * Movie REST API 기능 보완 (백엔드)
   * CSS 스타일링, 반응형 구현
   * Oven을 이용한 UI 설계 
+  
 * 이미현 - 백엔드 (Django)
+  * https://github.com/mhlee21/oneshot-backend
   * TMDB API 이용한 데이터 추출 및 가공
   * 백엔드 DB 설계, Movie, Shot, Account REST API 구현
-  *  Home, Movie detail 페이지 구현 (프론트엔드)
+  * Home, Movie detail 페이지 구현 (프론트엔드)
   * Netlify, AWS + S3 배포
+
 
 
 
