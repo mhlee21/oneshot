@@ -143,6 +143,8 @@ export default {
               router.push({ name: 'login' })
             }
           })
+      } else {
+        router.push({ name: 'NotFound404' })
       }
     },
 
