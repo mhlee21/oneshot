@@ -15,6 +15,7 @@ export default {
     index: 0,
     isLike: null,
     shotType: '',
+    imageUrl: 'http://localhost:8000',
     // imageUrl: 'https://one-shot-api.link',
   },
 
@@ -31,7 +32,7 @@ export default {
     index: state => state.index,
     isLike: state => state.isLike,
     shotType: state => state.shotType,
-    // imageUrl: state => state.imageUrl,
+    imageUrl: state => state.imageUrl,
   },
 
   mutations: {

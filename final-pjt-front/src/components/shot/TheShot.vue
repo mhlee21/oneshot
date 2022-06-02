@@ -45,6 +45,7 @@
 </template>
 
 <script>
+import drf from '@/api/drf'
 import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'TheShot',
@@ -53,7 +54,7 @@ export default {
     index: Number,
   },
   computed:{
-    ...mapGetters(['isLiked', 'currentUser', 'shotType']),
+    ...mapGetters(['isLiked', 'currentUser', 'shotType', 'imageUrl']),
     difTime() {
       const today = new Date();
       const timeValue = new Date(this.shot.created_at);
@@ -77,6 +78,9 @@ export default {
       return `${Math.floor(betweenTimeDay / 365)}년 전`;
     },
     shotImage() {
+      if (drf.host.host() === 'http://localhost:8000/api/v1/') {
+        return `${this.imageUrl}${this.shot.image}`
+      }
       return `${this.shot.image}`
     },
     shotUserUsername() {

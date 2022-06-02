@@ -15,10 +15,10 @@ class Shot(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
-    # def delete(self, *args, **kargs): # (local) DB 삭제하는 경우 저장한 이미지도 삭제하기 위해
-    #     if self.image:
-    #         os.remove(os.path.join(settings.MEDIA_ROOT, self.image.path))
-    #     super(Shot, self).delete(*args, **kargs)
+    def delete(self, *args, **kargs): # (local) DB 삭제하는 경우 저장한 이미지도 삭제하기 위해
+        if self.image:
+            os.remove(os.path.join(settings.MEDIA_ROOT, self.image.path))
+        super(Shot, self).delete(*args, **kargs)
     
     def __str__(self):
         return self.title

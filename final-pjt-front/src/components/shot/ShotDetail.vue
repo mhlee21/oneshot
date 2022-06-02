@@ -91,6 +91,7 @@
 </template>
 
 <script>
+import drf from '@/api/drf'
 import ShotComments from '@/components/shot/ShotComments.vue'
 import { mapGetters, mapActions } from 'vuex'
 export default {
@@ -102,8 +103,11 @@ export default {
     }
   },
   computed:{
-    ...mapGetters(['shot','index', 'isLike', 'currentUser', 'shotType']),
+    ...mapGetters(['shot','index', 'isLike', 'currentUser', 'shotType','imageUrl']),
     shotImage(){
+      if (drf.host.host() === 'http://localhost:8000/api/v1/') {
+        return `${this.imageUrl}${this.shot.image}`
+      }
       return `${this.shot.image}`
     },
     profileImage(){

@@ -8,7 +8,9 @@ const COMMENTS = 'comments/'
 const ACCOUNTS = 'accounts/'
 
 export default {
-  
+  host: {
+    host: () => HOST,
+  },
   movies: {
     // 인기있는 영화
     popular: pageNum => HOST + MOVIES + 'popular/' + `${pageNum}/`,
