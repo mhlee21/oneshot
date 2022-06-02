@@ -1,6 +1,6 @@
-// const HOST = 'http://localhost:8000/api/v1/'
+const HOST = 'http://localhost:8000/api/v1/'
 // const HOST = 'https://one-shot.link/api/v1/'
-const HOST = 'https://one-shot-api.link/api/v1/'
+// const HOST = 'https://one-shot-api.link/api/v1/'
 
 const MOVIES = 'movies/'
 const SHOTS = 'shots/'
